@@ -2,7 +2,7 @@
 #define SIZE 10
 
 // Prototypes
-void bubble(int work[], size_t size, int, int(*compare)(int a, int b));
+void bubble(int work[], size_t size, int (*compare)(int a, int b));
 int ascending(int a, int b);
 int descending(int a, int b);
 
@@ -35,8 +35,8 @@ int main(void) {
 	puts("\n")
 
 	// Bubble function
-	void bubble(int work[], size_t size, int(*compare)(int a, int b)) {
-		void swap(int *element1Ptr, int *element2Ptr);
+	void bubble(int work[], size_t size, int (*compare)(int a, int b)) {
+		void swap(int *element1, int *element2);
 
 		for(unsigned int pass = 1; pass < size; ++pass) {
 			for(size_t count = 0; count < size - 1; ++count) {
@@ -48,10 +48,10 @@ int main(void) {
 	}
 
 	// Swap function
-	void swap(int *element1Ptr, int *element2Ptr) {
-		int temp = *element1Ptr;
-		*element1Ptr = *element2Ptr;
-		*element2Ptr = temp;
+	void swap(int *element1, int *element2) {
+		int temp = *element1;
+		*element1 = *element2;
+		*element2 = temp;
 	}
 
 	// Ascending function
