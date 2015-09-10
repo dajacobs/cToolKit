@@ -16,4 +16,21 @@ int main(void) {
 	scanf("%d", &order);
 
 	puts("\nData items in original order");
+
+	for(size_t counter = 0; counter < SIZE; ++counter) {
+		printf("%5d", a[counter]);
+	}
+
+	if(order == 1) {
+		bubble(a, SIZE, ascending);
+		puts("\nData items in ascending order");
+	} else {
+		bubble(a, SIZE, descending);
+		puts("\nData items in descending order");
+	}
+
+	for(size_t counter = 0; counter < SIZE; ++counter) {
+		printf("%5d", a[counter]);
+	}
+	puts("\n")
 }
