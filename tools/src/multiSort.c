@@ -46,4 +46,21 @@ int main(void) {
 			}
 		}
 	}
+
+	// Swap function
+	void swap(int *element1Ptr, int *element2Ptr) {
+		int temp = *element1Ptr;
+		*element1Ptr = *element2Ptr;
+		*element2Ptr = temp;
+	}
+
+	// Ascending function
+	int ascending(int a, int b) {
+		return b < a;
+	}
+
+	// Descending function
+	int descending(int a, int b) {
+		return b > a;
+	}
 }
