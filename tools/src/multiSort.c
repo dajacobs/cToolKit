@@ -32,7 +32,7 @@ int main(void) {
 	for(size_t counter = 0; counter < SIZE; ++counter) {
 		printf("%5d", a[counter]);
 	}
-	puts("\n")
+	puts("\n");
 }
 
 // Bubble function
