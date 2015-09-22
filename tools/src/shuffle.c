@@ -30,4 +30,12 @@ int main(void) {
 	fillDeck(deck, face, suit);
 	shuffle(deck);
 	deal(deck);
+
+	// fillDeck function
+	void fillDeck(Card * const wDeck, const char * wFace[], const char * wSuit[]) {
+		for(size_t i = 0; i < CARDS; ++i) {
+			wDeck[i].face = wFace[i % FACES];
+			wDeck[i].suit = wSuit[i / FACES];
+		}
+	}
 }
