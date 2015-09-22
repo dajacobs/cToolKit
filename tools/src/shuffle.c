@@ -47,4 +47,10 @@ int main(void) {
 			wDeck[j] = temp;
 		}
 	}
+	// deal function
+	void deal(const Card * const wDeck) {
+		for(size_t i = 0; i < CARDS; ++i) {
+			printf("%5s of %-8s%s", wDeck[i].face, wDeck[i].suit, (i + 1) % 4 ? "  " : "\n");
+		}
+	}
 }
