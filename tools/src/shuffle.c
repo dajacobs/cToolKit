@@ -37,5 +37,14 @@ int main(void) {
 			wDeck[i].face = wFace[i % FACES];
 			wDeck[i].suit = wSuit[i / FACES];
 		}
+	} 
+	// shuffle function
+	void shuffle(Card * const wDeck) {
+		for(size_t i = 0; i < CARDS; ++i) {
+			size_t j = rand() % CARDS;
+			Card temp = wDeck[i];
+			wDeck[i] = wDeck[j];
+			wDeck[j] = temp;
+		}
 	}
 }
