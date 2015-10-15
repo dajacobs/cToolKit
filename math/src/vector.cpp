@@ -59,4 +59,19 @@ int main() {
 	if(integers1 == integers2)
 		cout << "First and second integers are equal" << endl;
 
+	// Create rvalue with first integer
+	cout << "\nFirst interger[5] is " << integers1[5];
+	// Create lvalue with first integer
+	cout << "\n\nAssigning 1000 to first interger[5]" << endl;
+	integers1[5] = 1000;
+	cout << "First integer:" << endl;
+	outputVector(integers1);
+
+	// Test out of range index
+	try {
+		cout << "\nAttempt to display integers1.at(15)" << endl; 
+		cout << integers1.at(15) << endl;		
+	} catch(out_of_range &ex) {
+		cout << "Exception occured:" << ex.what() << endl;	
+	}
 }
