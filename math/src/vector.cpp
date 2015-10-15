@@ -32,4 +32,31 @@ int main() {
 	outputVector(integers1);
 	cout << "second vector:" << endl;
 	outputVector(integers2);
+
+	// Condition to check for equality
+	cout << "\nEvaluating: first integer != second integer" << endl;
+	if(integers1 != integers2)
+		cout << "The first and second integers are not equal" << endl;
+
+	// Create third vector using first vector
+	vector<int> integers3(integers1);
+
+	// Print size and contents of new vector
+	cout << "\nSize of third vector is " << integers3.size() << "\nvector after intialization:" << endl;
+	outputVector(integers3);
+	// Print new assigning of first and second integers
+	cout << "\nAssigning second integer to the first integer:" << endl;
+	integers1 = integers2;
+
+	// Print contents of first and second integers
+	cout << "First integer:" << endl;
+	outputVector(integers1);
+	cout << "Second integer:" << endl;
+	outputVector(integers2);
+	// Condition to check equality
+	cout << "\nEvaluating: first integer == second integer" << endl;
+
+	if(integers1 == integers2)
+		cout << "First and second integers are equal" << endl;
+
 }
