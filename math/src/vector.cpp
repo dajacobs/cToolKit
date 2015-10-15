@@ -74,4 +74,16 @@ int main() {
 	} catch(out_of_range &ex) {
 		cout << "Exception occured:" << ex.what() << endl;	
 	}
+
+	// Print output function
+	void outputVector(const vector<int> &array) {
+		sizt_t i;
+		for(i = 0; i < array.size(); ++i) {
+			cout << setw(12) << array[i];
+			if((i + 1) % 4 == 0)
+				cout << endl;
+		}
+		if(i % 4 != 0)
+			cout << endl;	
+	}
 }
