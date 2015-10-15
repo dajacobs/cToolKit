@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <stdexcept>
 using namespace std;
 
 void outputVector(const vector<int> &);
@@ -71,19 +72,25 @@ int main() {
 	try {
 		cout << "\nAttempt to display integers1.at(15)" << endl; 
 		cout << integers1.at(15) << endl;		
-	} catch(out_of_range &ex) {
+	} catch(const std::out_of_range &ex) {
 		cout << "Exception occured:" << ex.what() << endl;	
 	}
-
-	// Print output function
-	void outputVector(const vector<int> &array) {
-		sizt_t i;
-		for(i = 0; i < array.size(); ++i) {
-			cout << setw(12) << array[i];
-			if((i + 1) % 4 == 0)
-				cout << endl;
-		}
-		if(i % 4 != 0)
-			cout << endl;	
+	return 0;
+}
+// Output vector function
+void outputVector(const vector<int> &array) {
+	size_t i;
+	for(i = 0; i < array.size(); ++i) {
+		cout << setw(12) << array[i];
+		if((i + 1) % 4 == 0)
+			cout << endl;
+	}
+	if(i % 4 != 0)
+		cout << endl;	
+}
+// Input vector function
+void inputVector(vector<int> &array) {
+	for(size_t i = 0; i < array.size(); ++i) {
+		cin >> array[i];
 	}
 }
