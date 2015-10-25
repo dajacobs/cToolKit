@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <stdexcept>
-#include "time"
+#include "time.h"
 using namespace std;
 
 // Time constructor initialize
