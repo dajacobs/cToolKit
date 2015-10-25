@@ -31,3 +31,11 @@ void Time::setMinute(int m) {
 		throw invalid_argument("The minute must be 0-59 format.");
 	}
 }
+// Set second value function
+void Time::setSecond(int s) {
+	if(s >= 0 && s < 60) {
+		second = s;
+	} else {
+		throw invalid_argument("The second must be 0-59 format.");
+	}	
+}
