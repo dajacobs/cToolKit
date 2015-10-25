@@ -51,3 +51,11 @@ unsigned Time::getMinute() const {
 unsigned Time::getSecond() const {
 	return second;
 }
+// Print universal time format
+void Time::printUniversal() const {
+	cout << setfill('0') << setw(2) << getHour() << ":" << setw(2) << getMinute() << ":" << setw(2) << getSecond();
+}
+// Print standard time format
+void Time::printStandard() const {
+	cout << ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12) << ":" << setfill('0') << setw(2) << getMinute() << ":" << setw(2) << getSecond() << (hour < 12 ? " AM" : " PM"); 
+}
