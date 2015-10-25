@@ -15,3 +15,11 @@ void Time::setTime(int h, int m, int s) {
 	setMinute(m);
 	setSecond(s);
 }
+// Set hour value function
+void Time::setHour(int h) {
+	if(h >= 0 && h < 24) {
+		hour = h;
+	} else {
+		throw invalid_argument("The hour must be 0-23 format.");
+	}
+}
