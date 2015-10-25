@@ -39,3 +39,15 @@ void Time::setSecond(int s) {
 		throw invalid_argument("The second must be 0-59 format.");
 	}	
 }
+// Get hour value function
+unsigned int Time::getHour() const {
+	return hour;
+}
+// Get minute value function
+unsigned Time::getMinute() const {
+	return minute;
+}
+// Get second value function
+unsigned Time::getSecond() const {
+	return second;
+}
