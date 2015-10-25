@@ -23,3 +23,11 @@ void Time::setHour(int h) {
 		throw invalid_argument("The hour must be 0-23 format.");
 	}
 }
+// Set minute value function
+void Time::setMinute(int m) {
+	if(m >= 0 && m < 60) {
+		minute = m;
+	} else {
+		throw invalid_argument("The minute must be 0-59 format.");
+	}
+}
