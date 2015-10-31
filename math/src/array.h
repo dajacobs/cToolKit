@@ -13,4 +13,14 @@ public:
 	size_t getSize() const;
 	const Array &operator = (const Array &);
 	bool operator == (const Array &) const;
-}
+
+	bool operator != (const Array &right) const {
+		return ! (*this == right);
+	}
+	int &operator[](int);
+
+private:
+	size_t size;
+	int *ptr;
+};
+#endif
