@@ -46,4 +46,12 @@ int main() {
 	intOne[5] = 1000;
 	// Print contents to verify
 	cout << "First arrays contents:\n" << intOne;
+
+	// Conditional check for out of bounds index
+	try {
+		cout << "\nAttempt to assign 1000 to first arrays index of 5" << endl;
+		intOne[15] = 1000;
+	} catch(out_of_range &ex) {
+		cout << "Exception: " << ex.what() << endl;
+	}
 }
