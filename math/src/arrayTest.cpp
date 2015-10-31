@@ -32,4 +32,10 @@ int main() {
 	intOne = intTwo;
 	// Print contents	
 	cout << "First array:\n" << intOne << "Second array:\n" << intTwo;
+
+	// Evaluate equality
+	cout << "\nEvaluating: first and second array are equal" << endl;
+	if(intOne == intTwo) {
+		cout << "first and second array are equal" << endl;
+	}
 }
