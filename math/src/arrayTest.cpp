@@ -8,8 +8,8 @@ int main() {
 	Array intTwo;
 
 	// Print sizes and contents of arrays
-	cout << "Size of first array is " << intOne.getSize() << "\nthe array size after initialization: \n" << intOne;
-	cout << "Size of second array is " << intTwo.getSize() << "\nthe array size after initialization: \n" << intTwo;	
+	cout << "\nSize of first array is " << intOne.getSize() << "\nthe array size after initialization: \n" << intOne;
+	cout << "\nSize of second array is " << intTwo.getSize() << "\nthe array size after initialization: \n" << intTwo;	
 
 	// Input and print the contents
 	cout << "\nEnter 17 integers:" << endl;
@@ -22,4 +22,14 @@ int main() {
 	if(intOne != intTwo) {
 		cout << "first and second array are not equal" << endl;
 	}
+
+	Array intThr(intOne);
+	// Print size and contests of array
+	cout << "\nSize of third array is " << intThr.getSize() << "\nthe array size after initialization: \n" << intThr;
+	
+	// Copy contents
+	cout << "\nCopying contents of second array to first:" << endl;
+	intOne = intTwo;
+	// Print contents	
+	cout << "First array:\n" << intOne << "Second array:\n" << intTwo;
 }
