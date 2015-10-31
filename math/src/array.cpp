@@ -38,3 +38,15 @@ const Array &Array::operator = (const Array &right) {
 		return *this;
 	}
 }
+// Conditional check for equality
+bool Array::operator == (const Array &right) const {
+	if(size != right.size) {
+		return false;
+		for(size_t i = 0; i < size; ++i) {
+			if(ptr[i] != right.ptr[i]) {
+				return false;
+			}	
+		}
+	}
+	return true;
+}
