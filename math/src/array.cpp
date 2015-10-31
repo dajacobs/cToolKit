@@ -16,3 +16,12 @@ Array::Array(const Array &arrayToCopy):size(arrayToCopy.size), ptr(new int[size]
 		ptr[i] = arrayToCopy.ptr[i];
 	}
 }
+
+// Array destructor
+Array::~Array() {
+	delete[] ptr;
+}
+// Get size
+size_t Array::getSize() const {
+	return size;
+}
