@@ -63,4 +63,11 @@ int Array::operator[](int subscript) const {
 		throw out_of_range("subscript out of range");
 	return ptr[subscript];	
 	}
-} 
+}
+// Overloaded input for entire array
+istream &operator >> (istream &input, Array &a) {
+	for(size_t i = 0; i < a.size; ++i) {
+		input >> a.ptr[i];
+	}
+	return input;
+}
