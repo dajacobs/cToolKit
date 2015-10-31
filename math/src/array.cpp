@@ -10,3 +10,9 @@ Array::Array(int arraySize):size(arraySize > 0 ? arraySize:throw invalid_argueme
 		ptr[i] = 0;
 	}
 }
+// Copy array constructor
+Array::Array(const Array &arrayToCopy):size(arrayToCopy.size), ptr(new int[size]) {
+	for(size_t i = 0; i < size; ++i) {
+		ptr[i] = arrayToCopy.ptr[i];
+	}
+}
