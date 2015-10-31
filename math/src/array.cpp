@@ -71,3 +71,16 @@ istream &operator >> (istream &input, Array &a) {
 	}
 	return input;
 }
+// Overloaded output for array
+ostream &operator << (ostream &output, const Array &a) {
+	for(size_t i = 0; i < a.size; ++i) {
+		output << setw(12) << a.ptr[i];
+		if((i + 1) % 4 == 0) {
+			output << endl;
+		}
+	}
+	if(a.size % 4 != 0) {
+		ouput << endl;
+	}
+	return output;
+}
