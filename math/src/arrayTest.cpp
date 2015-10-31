@@ -15,4 +15,11 @@ int main() {
 	cout << "\nEnter 17 integers:" << endl;
 	cin >> intOne >> intTwo;
 	cout << "\nContents out input:\n" << "first array:\n" << intOne << "second array:\n" << intTwo;
+
+	// Evaluate equality
+	cout << "\nEvaluating: first array != second array" << endl;
+	// Conditional check for equality
+	if(intOne != intTwo) {
+		cout << "first and second array are not equal" << endl;
+	}
 }
