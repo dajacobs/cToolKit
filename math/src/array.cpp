@@ -50,3 +50,10 @@ bool Array::operator == (const Array &right) const {
 	}
 	return true;
 }
+// Overloaded subscript for lvalue if out of range
+int &Array::operator[](int subscript) {
+	if(subscript < 0 || subscript >= size) {
+		throw out_of_range("subscript out of range");
+	return ptr[subscript];	
+	}
+}
