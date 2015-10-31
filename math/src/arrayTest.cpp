@@ -42,7 +42,7 @@ int main() {
 	// Rvalue with overloading
 	cout << "\nFirst array index 5 is " << intOne[5];
 	// Lvalue with overloading
-	cout << "\n\nAssigning 1000 to first arrays index 5" < endl;
+	cout << "\n\nAssigning 1000 to first arrays index 5" << endl;
 	intOne[5] = 1000;
 	// Print contents to verify
 	cout << "First arrays contents:\n" << intOne;
