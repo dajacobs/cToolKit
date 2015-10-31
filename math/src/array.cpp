@@ -16,7 +16,6 @@ Array::Array(const Array &arrayToCopy):size(arrayToCopy.size), ptr(new int[size]
 		ptr[i] = arrayToCopy.ptr[i];
 	}
 }
-
 // Array destructor
 Array::~Array() {
 	delete[] ptr;
@@ -24,4 +23,18 @@ Array::~Array() {
 // Get size
 size_t Array::getSize() const {
 	return size;
+}
+// Overloaded assignment
+const Array &Array::operator = (const Array &right) {
+	if(&right != this) {
+		if(size != right.size) {
+			delete[] ptr;
+			size = right.size;
+			ptr = new int[size];
+		}
+		for(size_t i = 0; i < size; ++i) {
+			ptr[i] = right.ptr[i];
+		}
+		return *this;
+	}
 }
