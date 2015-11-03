@@ -15,4 +15,7 @@ public:
 	double earnings() const;
 	// Print object
 	void print() const;
-}
+private:
+	double getSalary;
+};
+#endif
