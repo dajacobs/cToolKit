@@ -36,4 +36,5 @@ private:
 	std::string socialNumb;
 	double grossSales;
 	double commRate;
-}
+};
+#endif
