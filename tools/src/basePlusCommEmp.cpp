@@ -15,3 +15,7 @@ void basePlusCommEmploy::setBaseSal(double salary) {
 		throw invalid_arguement("Salary must be >= 0.0");
 	}
 }
+// Getter for base salary
+double basePlusCommEmploy::getBaseSal() const {
+	return baseSalary;
+}
