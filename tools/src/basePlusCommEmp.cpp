@@ -19,3 +19,7 @@ void basePlusCommEmploy::setBaseSal(double salary) {
 double basePlusCommEmploy::getBaseSal() const {
 	return baseSalary;
 }
+// Calculate earnings
+double basePlusCommEmploy::earnings() const {
+	return getBaseSal() + commissionEmployee::earnings();
+}
