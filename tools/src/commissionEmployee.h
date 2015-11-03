@@ -30,4 +30,10 @@ public:
 	double earnings();
 	// Print object
 	void print() const;
+private:
+	std::string firstName;
+	std::string lastName;
+	std::string socialNumb;
+	double grossSales;
+	double commRate;
 }
