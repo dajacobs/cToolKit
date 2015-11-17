@@ -21,4 +21,8 @@ public:
 	bool isEmpty() const {
 		return stack.empty();
 	}
+	// Getter for size of stack
+	size_t size() const {
+		return stack.size();
+	}
 }
