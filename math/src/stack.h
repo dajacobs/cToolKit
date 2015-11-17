@@ -17,4 +17,8 @@ public:
 	void pop() {
 		stack.pop_front();
 	}
+	// Conditional check for empty 
+	bool isEmpty() const {
+		return stack.empty();
+	}
 }
