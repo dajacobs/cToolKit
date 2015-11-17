@@ -13,4 +13,8 @@ public:
 	void push(const T &pushValue) {
 		stack.push_front(pushValue);
 	}
+	// Pop element off stack
+	void pop() {
+		stack.pop_front();
+	}
 }
