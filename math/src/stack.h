@@ -25,4 +25,7 @@ public:
 	size_t size() const {
 		return stack.size();
 	}
-}
+private:
+	std::deque<T> stack;
+};
+#endif
