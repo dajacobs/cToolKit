@@ -9,4 +9,8 @@ public:
 	T& top() {
 		return stack.front();
 	}
+	// Push element on stack
+	void push(const T &pushValue) {
+		stack.push_front(pushValue);
+	}
 }
