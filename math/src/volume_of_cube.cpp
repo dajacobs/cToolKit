@@ -1,7 +1,5 @@
 #include <iostream>
-using std::cout;
-using std::cin;
-using std::endl;
+using namespace std;
 
 // Cube function
 inline double cube(const double side) 
