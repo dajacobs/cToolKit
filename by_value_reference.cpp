@@ -20,3 +20,8 @@ int main()
 	squareByRerence(z);	
 	cout << "z = " << z << << " after squareByRerence" << endl;
 }
+// Square by value function
+int squareByValue(int number)
+{
+	return number *= number;
+}
