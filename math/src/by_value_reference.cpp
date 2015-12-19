@@ -26,7 +26,7 @@ int squareByValue(int number)
 	return number *= number;
 }
 // Square by reference function
-int squareByRerence(int &numberRef)
+void squareByRerence(int &numberRef)
 {
-	return numberRef *= numberRef;
+	numberRef *= numberRef;
 }
