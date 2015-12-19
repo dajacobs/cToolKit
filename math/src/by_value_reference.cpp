@@ -16,9 +16,9 @@ int main()
 
 	// Square by reference demo
 	int z = 4;
-	cout << "z = " << z << << " before squareByRerence" << endl;\
+	cout << "z = " << z << " before squareByRerence" << endl;
 	squareByRerence(z);	
-	cout << "z = " << z << << " after squareByRerence" << endl;
+	cout << "z = " << z << " after squareByRerence" << endl;
 }
 // Square by value function
 int squareByValue(int number)
@@ -26,7 +26,7 @@ int squareByValue(int number)
 	return number *= number;
 }
 // Square by reference function
-int squareByValue(int &numberRef)
+int squareByRerence(int &numberRef)
 {
 	return numberRef *= numberRef;
 }
