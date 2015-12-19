@@ -17,6 +17,6 @@ int main()
 		cout << "\nEnter the side length of your cube: ";
 		cin >> sideValue;
 
-		cout << "Volume of the cube with side" << sideValue << " is " << cube(sideValue) << endl; 
+		cout << "Volume of the cube with side " << sideValue << " is " << cube(sideValue) << endl; 
 	}
 }
